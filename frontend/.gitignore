@@ -1,0 +1,16 @@
+# Ignore node_modules and build
+node_modules/
+dist/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
+
+# VSCode settings
+.vscode/

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="max-width: 400px; margin: 40px auto;">
+  <h2 class="mb-4 text-center">Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary w-100">Log in</button>
+  </form>
+  {% if form.errors %}
+    <div class="alert alert-danger mt-3">
+      {% for field in form %}
+        {% for error in field.errors %}
+          <div>{{ error }}</div>
+        {% endfor %}
+      {% endfor %}
+      {% for error in form.non_field_errors %}
+        <div>{{ error }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔁 Shared animated background keyframes */
+@keyframes gradientWaves {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🎬 Splash screen: fast, vibrant animation */
+.splash-wrapper {
+  background: linear-gradient(-45deg, #f6d6ff, #d1f5f0, #ffe0e6, #e6e4ff);
+  background-size: 400% 400%;
+  animation: gradientWaves 6s ease infinite;
+  overflow: hidden;
+}
+
+/* 🔐 Login screen: slower, muted version */
+.login-bg {
+  background: linear-gradient(-45deg,
+    #f6d6ff,
+    #d1f5f0,
+    #ffe0e6,
+    #e6e4ff
+  );
+  background-size: 400% 400%;
+  animation: gradientWaves 18s ease-in-out infinite;
+ 
+}
+
+/* ✨ Splash fade in and out */
+@keyframes fadeinout {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+.fade-in-out {
+  animation: fadeinout 2.5s ease-in-out forwards;
+}
+
+/* 🧊 Floating card animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 🫀 Logo pulse (used on login + splash) */
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+.animate-logo-pulse {
+  animation: logoPulse 5s ease-in-out infinite;
+}
