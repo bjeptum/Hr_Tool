@@ -85,8 +85,6 @@ CHANNEL_LAYERS = {
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 import os
-from dotenv import load_dotenv
-load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Use PostgreSQL for both local development and test environment
 DATABASES = {
