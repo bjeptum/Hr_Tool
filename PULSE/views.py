@@ -169,6 +169,7 @@ def signup(request):
 
 from django.shortcuts import redirect
 
+
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def employee_api(request):
